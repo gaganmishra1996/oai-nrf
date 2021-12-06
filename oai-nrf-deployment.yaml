@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert --volumes hostPath
+    kompose.service.type: NodePort
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: oai-nrf
+  name: oai-nrf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: oai-nrf
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert --volumes hostPath
+        kompose.service.type: NodePort
+        kompose.version: 1.22.0 (955b78124)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: oai-nrf
+    spec:
+      containers:
+        - env:
+            - name: INSTANCE
+              value: "0"
+            - name: NRF_API_VERSION
+              value: v1
+            - name: NRF_INTERFACE_HTTP2_PORT_FOR_SBI
+              value: "9090"
+            - name: NRF_INTERFACE_NAME_FOR_SBI
+              value: eth0
+            - name: NRF_INTERFACE_PORT_FOR_SBI
+              value: "80"
+            - name: PID_DIRECTORY
+              value: /var/run
+          image: 592526131074.dkr.ecr.ap-southeast-1.amazonaws.com/goai-nrf:latest
+          imagePullPolicy: IfNotPresent
+          name: oai-nrf
+          ports:
+            - containerPort: 80
+            - containerPort: 9090
+          resources: {}
+      restartPolicy: Always
+status: {}
