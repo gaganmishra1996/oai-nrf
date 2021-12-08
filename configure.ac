@@ -3,6 +3,6 @@ AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AC_PROG_CXX
 AC_CONFIG_FILES([
  Makefile
- src/oai-nrf/MakeFile
+ src/MakeFile
 ])
 AC_OUTPUT
