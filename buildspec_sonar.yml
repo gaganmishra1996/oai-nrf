@@ -23,6 +23,7 @@ phases:
     pre_build:
         commands: 
             - echo "we are in the pre build phase"
+            - ls ./
             - ./build-wrapper-linux-x86/build-wrapper-linux-x86-64 --out-dir ./bw-output make build
             - ls ./bw-output
             - cat ./bw-output/build-wrapper-dump.json
