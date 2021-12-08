@@ -56,7 +56,7 @@ jobs:
       - name: Run build-wrapper
         run: |
           
-          sudo apt-get install libconfig++-dev -y
+          sudo apt install libconfig++-dev -y
           autoreconf --install
           ./configure
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make clean all
