@@ -49,7 +49,7 @@ jobs:
       - name: Run build-wrapper
         run: |
           ls 
-          sleep 20
+          sudo apt install libconfig++-dev -y
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} sudo make build
       - name: Run sonar-scanner
         env:
