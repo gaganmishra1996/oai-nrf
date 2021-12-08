@@ -1,2 +1,2 @@
 bin_PROGRAMS = oai-nrf
-oai-nrf_SOURCES = main.cpp
+sonar_scanner_example_SOURCES = main.cpp
