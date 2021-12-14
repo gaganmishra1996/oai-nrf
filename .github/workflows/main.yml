@@ -57,7 +57,7 @@ jobs:
         run: |
           
           cat /etc/os-release
-          cd src/oai-nrf/
+          
           sudo apt-get install libconfig++-dev -y
           mkdir buildOp
           cmake -S . -B buildOp
