@@ -23,7 +23,7 @@ set(NRF_API_SERVER_DIR "${SRC_TOP_DIR}/api-server")
 
 include_directories(${NRF_API_SERVER_DIR}/api)
 include_directories(${NRF_API_SERVER_DIR}/impl)
-include_directories(/model)
+include_directories(${NRF_API_SERVER_DIR}/model)
 include_directories(${NRF_API_SERVER_DIR}/)
 include_directories(${SRC_TOP_DIR}/nrf_app)
 include_directories(${SRC_TOP_DIR}/common)
