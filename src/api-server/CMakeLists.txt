@@ -39,4 +39,8 @@ file(GLOB NRF_API_SERVER_src_files
 )
  
 add_library(NRF_API STATIC
-           ${NRF_API_SERVER_src_files})
+           nrf-api-server.cpp
+           nrf-http2-server.cpp
+           model/*.cpp
+           api/*.cpp
+           impl/*.cpp)
