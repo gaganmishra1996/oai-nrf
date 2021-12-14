@@ -8,6 +8,7 @@ pre-req:
 	
 
 build: pre-req
+	git init
 	git config --global http.proxy ""
 	git config --global https.postBuffer 123289600
 	git config --global http.sslverify false
