@@ -58,6 +58,7 @@ jobs:
           
           cat /etc/os-release
           sleep 20
+          sudo apt-get install libconfig++-dev -y
           mkdir buildOp
           cmake -S . -B buildOp
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build buildOp/ --config Release
