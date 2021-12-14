@@ -55,7 +55,9 @@ jobs:
           echo "$HOME/.sonar/build-wrapper-linux-x86" >> $GITHUB_PATH
       - name: Run build-wrapper
         run: |
-        
+          
+          cat /etc/os-release
+          sleep 20
           mkdir buildOp
           cmake -S . -B buildOp
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build buildOp/ --config Release
