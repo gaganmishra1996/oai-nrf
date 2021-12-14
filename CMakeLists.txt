@@ -259,9 +259,9 @@ else(STATIC_LINKING)
     SET(BUILD_SHARED_LIBS ON)
 endif(STATIC_LINKING)
 
-ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/src/common ${CMAKE_CURRENT_BINARY_DIR}/common)
-ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/src/common/utils ${CMAKE_CURRENT_BINARY_DIR}/utils)
-ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/src/api-server ${CMAKE_CURRENT_BINARY_DIR}/api-server)
+ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/../../src/common ${CMAKE_CURRENT_BINARY_DIR}/common)
+ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/../../src/common/utils ${CMAKE_CURRENT_BINARY_DIR}/utils)
+ADD_SUBDIRECTORY(${CMAKE_CURRENT_SOURCE_DIR}/../../src/api-server ${CMAKE_CURRENT_BINARY_DIR}/api-server)
 
 ################################################################################
 # Specific part for oai_nrf folder
