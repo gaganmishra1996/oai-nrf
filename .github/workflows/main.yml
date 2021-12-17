@@ -59,6 +59,7 @@ jobs:
           cat /etc/os-release
           
           sudo apt-get install libconfig++-dev -y
+          sudo apt-get install cmake -y
           
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} sudo make clean build
       - name: Run sonar-scanner
