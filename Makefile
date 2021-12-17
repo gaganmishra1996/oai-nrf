@@ -14,4 +14,7 @@ build: pre-req
 	git config --global http.sslverify false
 	build/scripts/build_nrf --install-deps --force
 	build/scripts/build_nrf --clean --Verbose --build-type Release --jobs
+	
+clean:
+	echo "cleaning"
 
