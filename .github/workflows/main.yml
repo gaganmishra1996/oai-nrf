@@ -59,7 +59,7 @@ jobs:
           cat /etc/os-release
           
           sudo apt-get install libconfig++-dev -y
-          cd src/oai-nrf/
+          cd build/nrf/
           ls
           mkdir buildOp
           cd buildOp
