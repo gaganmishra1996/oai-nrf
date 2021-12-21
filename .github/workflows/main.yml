@@ -59,11 +59,10 @@ jobs:
           cat /etc/os-release
           
           sudo apt-get install libconfig++-dev -y
-          cd build/nrf/
-          ls
+          
           mkdir buildOp
           
-          cmake -S . -B buildOp
+          cmake -S /build/nrf/ -B buildOp
           
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build buildOp/ --config Release
       - name: Run sonar-scanner
