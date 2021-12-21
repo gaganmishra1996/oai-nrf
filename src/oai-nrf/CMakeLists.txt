@@ -280,7 +280,7 @@ include_directories(${SRC_TOP_DIR}/api-server/model)
 
 add_executable(nrf
   main.cpp
-  ${SRC_TOP_DIR}/oai-nrf/options.cpp
+  options.cpp
   )
 
 IF(STATIC_LINKING)
