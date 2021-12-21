@@ -61,7 +61,7 @@ jobs:
           sudo apt-get install libconfig++-dev -y
           
           mkdir buildOp
-          ls /build/nrf/
+          ls build/nrf/
           cmake -S build/nrf/ -B buildOp
           
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build buildOp/ --config Release
