@@ -279,7 +279,7 @@ include_directories(${SRC_TOP_DIR}/api-server/impl)
 include_directories(${SRC_TOP_DIR}/api-server/model)
 
 add_executable(nrf
-  ${SRC_TOP_DIR}/oai-nrf/main.cpp
+  src/oai-nrf/main.cpp
   ${SRC_TOP_DIR}/oai-nrf/options.cpp
   )
 
